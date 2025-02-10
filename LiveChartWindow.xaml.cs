@@ -27,7 +27,7 @@ namespace WpfLiveChart
         public void SetTitle(string title)
         {
             wpfPlot1.Plot.Axes.Title.Label.Text= title;
-            wpfPlot1.Plot.Axes.Title.Label.FontSize = 32;
+            wpfPlot1.Plot.Axes.Title.Label.FontSize = 64;
         }
 
         private static string FormatAxisValue(double value)
@@ -89,7 +89,7 @@ namespace WpfLiveChart
             double yMax = newLimits.Top;
 
             // Ensure newYMax is always more positive (or less negative) than MIN_SCALE
-            double newYMax = Math.Max(yMax, MIN_SCALE);
+            double newYMax = Math.Max(yMax, MIN_SCALE)*1.15;
 
             // Always ensure yMax is at least this much larger than yMin
             double minimumRange = Math.Abs(MIN_SCALE);
@@ -126,6 +126,20 @@ namespace WpfLiveChart
             };
 
             dataTimer.Start();
+        }
+        public void ClearData()
+        {
+            if (!Dispatcher.CheckAccess())
+            {
+                Dispatcher.Invoke(() => ClearData());
+                return;
+            }
+
+            // Reset all data points to zero
+            Array.Clear(dataY, 0, dataY.Length);
+
+            // Refresh the plot
+            wpfPlot1.Refresh();
         }
         protected override void OnClosed(EventArgs e)
         {
