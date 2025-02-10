@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfLiveChart", "WpfLiveChart.csproj", "{C9F701D2-18ED-4EC8-9302-8486A346D46B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9F701D2-18ED-4EC8-9302-8486A346D46B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F701D2-18ED-4EC8-9302-8486A346D46B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F701D2-18ED-4EC8-9302-8486A346D46B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F701D2-18ED-4EC8-9302-8486A346D46B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F2B742B-5308-4B72-A34D-B10C0BD93597}
+	EndGlobalSection
+EndGlobal
